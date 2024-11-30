@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" id="homeTab" onclick="showPage('homePage')" class="active">Home</a>
+        <a href="#" id="createPostTab" onclick="showPage('createPostPage')">Create Post</a>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page">
+        <h2>Published Blogs</h2>
+        <div id="blogContainer" class="blog-container">
+            <!-- Blogs will be dynamically displayed here -->
+        </div>
+    </div>
+
+    <!-- Create Post Page -->
+    <div id="createPostPage" class="page" style="display: none;">
+        <h2>Create a Post</h2>
+        <form id="blogForm" onsubmit="handleSubmit(event)">
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="content" placeholder="Content" required></textarea>
+            <input type="file" id="image" accept="image/*">
+            <button type="submit">Post</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
